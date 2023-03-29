@@ -1,37 +1,28 @@
-//     1
-//   1 2 1
-// 1 2 3 2 1
 #include<stdio.h>
 int main()
 {
-    int n,i,j,w=1,t,z;
+    int n,i,j;
     // printf("Enter the nth row:");
     scanf("%d",&n);
-    int s=n-1,p=1;
+    int s=n-1,p=n;
     for (i = 1; i <= n; i++)
     {
-        z=w-1,t=0;
         for ( j = 1; j <=s; j++)
         {
             printf(" ");
         }
-        for ( j = 1; j <=p; j++)
+        for ( j = 1; j <=n; j++)
         {
            
-            if(j<=p/2)
+            if(i==n||i==1||j==1||j==n)
             {
-                printf("%d",z);
-                z--;
+                printf("*");
             }
-            else
-            {
-                printf("%d",t);
-                t++;
+            else{
+                printf(" ");
             }
         }
-        p=p+2;
         s--;
-        w++;
         printf("
 ");
     }
