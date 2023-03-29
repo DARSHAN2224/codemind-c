@@ -4,32 +4,34 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,w,t;
+    int n,i,j,w=1,t,z;
     // printf("Enter the nth row:");
     scanf("%d",&n);
-    int s=n-1;
-    if(n%2==0)
-    t=n+1;
-    else
-    t=n;
+    int s=n-1,p=1;
     for (i = 1; i <= n; i++)
     {
-        w=1;
-        for ( j = 1; j <=t; j++)
+        z=w-1,t=0;
+        for ( j = 1; j <=s; j++)
+        {
+            printf(" ");
+        }
+        for ( j = 1; j <=p; j++)
         {
            
-            if(j<=t/2)
+            if(j<=p/2)
             {
-                printf("%d",w);
-                w++;
+                printf("%d",z);
+                z--;
             }
             else
             {
-                printf("%d",w);
-                w--;
+                printf("%d",t);
+                t++;
             }
         }
-        // p=p+2;
+        p=p+2;
+        s--;
+        w++;
         printf("
 ");
     }
