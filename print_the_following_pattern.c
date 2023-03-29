@@ -1,28 +1,37 @@
+//     1
+//   1 2 1
+// 1 2 3 2 1
 #include<stdio.h>
-
 int main()
 {
-    int i,j,n,t;
-
-    // printf("Enter number of rows: ");
+    int n,i,j,w,t;
+    // printf("Enter the nth row:");
     scanf("%d",&n);
+    int s=n-1;
     if(n%2==0)
-    t=n/2;
+    t=n+1;
     else
-    t=n/2+1;
-
-    for(i=1;i<=n;i++)
+    t=n;
+    for (i = 1; i <= n; i++)
     {
-        for(j=1;j<=t;j++)
+        w=1;
+        for ( j = 1; j <=t; j++)
         {
-            printf("%d", j);
+           
+            if(j<=t/2)
+            {
+                printf("%d",w);
+                w++;
+            }
+            else
+            {
+                printf("%d",w);
+                w--;
+            }
         }
-
-        for(j=1;j<=t-1;j++)
-        {
-            printf("%d", j);
-        }
+        // p=p+2;
         printf("
 ");
     }
+    
 }
