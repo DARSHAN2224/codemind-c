@@ -1,10 +1,7 @@
 #include<stdio.h>
 int main()
 {
-int t,n;
-scanf("%d",&t);
-for(int i=1;i<=t;i++)
-{
+    int n;
     scanf("%d",&n);
     int te=n,sum=0;
     while(te!=0)
@@ -19,10 +16,7 @@ for(int i=1;i<=t;i++)
         te=te/10;
     }
     if(n==sum)
-    printf("Strong
-");
+    printf("The number %d is a strong number",n);
     else
-    printf("Not Strong
-");
-}
+    printf("The number %d is not a strong number",n);
 }
